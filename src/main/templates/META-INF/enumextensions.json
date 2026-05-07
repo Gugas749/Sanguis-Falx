@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/world/item/Rarity",
+      "name": "SANGUISFALX_RARITY_SANGUIS",
+      "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
+      "parameters": {
+        "class": "com/gugas749/sanguisfalx/common/Utils/Rarities",
+        "field": "SANGUIS_RARITY"
+      }
+    }
+  ]
+}
