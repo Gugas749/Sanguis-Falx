@@ -1,4 +1,4 @@
-package com.gugas749.sanguisfalx.Items;
+package com.gugas749.sanguisfalx.Items.Weapons;
 
 import com.gugas749.sanguisfalx.Utils.SFWeaponsTiers;
 import com.gugas749.sanguisfalx.Utils.SFRarities;

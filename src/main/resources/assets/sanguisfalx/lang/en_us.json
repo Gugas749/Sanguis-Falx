@@ -2,5 +2,8 @@
   "creativetab.sanguisfalx": "Sanguis Falx",
   "item.sanguisfalx.name": "Sanguis Falx",
   "item.sanguisfalx.tooltip1": "A blood stained Scythe created with the hatred of those how had their blood and lifes sacrificed by it...",
-  "rarity.SANGUISFALX_RARITY_SANGUIS.name": "Sanguis"
+  "rarity.SANGUISFALX_RARITY_SANGUIS.name": "Sanguis",
+  "item.ira.name": "Ira",
+  "item.ira.tooltip1": "Forma physica maximae irae tuae.",
+  "item.ira.tooltip2": "Sentiant inimici tui iram tuam in propria pelle."
 }

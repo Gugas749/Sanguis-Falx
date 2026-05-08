@@ -1,14 +1,25 @@
 package com.gugas749.sanguisfalx;
 
+import com.gugas749.sanguisfalx.Items.Curios.IraItemRenderer;
+import com.gugas749.sanguisfalx.Items.Curios.IraRenderer;
 import com.gugas749.sanguisfalx.Registries.SFCreativeModeTabs;
 import com.gugas749.sanguisfalx.Registries.SFItemsRegistry;
 import com.mojang.logging.LogUtils;
+import io.redspace.ironsspellbooks.item.SpellBook;
+import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
+import mod.azure.azurelib.common.animation.cache.AzIdentityRegistry;
+import mod.azure.azurelib.common.render.armor.AzArmorRendererRegistry;
 import net.minecraft.resources.ResourceLocation;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.slf4j.Logger;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // @Mod marks this class as the NeoForge mod entry point.
 // NeoForge reads this annotation and calls the constructor when Minecraft loads the mod.
@@ -28,7 +39,7 @@ public class Sanguisfalx {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Sanguisfalx(IEventBus modEventBus, ModContainer modContainer) {
-        SFItemsRegistry.ITEMS.register(modEventBus);
+        SFItemsRegistry.register(modEventBus);
         SFCreativeModeTabs.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
@@ -49,5 +60,33 @@ public class Sanguisfalx {
     // Think of it like a URI or a fully qualified class name.
     public static ResourceLocation rl(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
+
+
+
+    @EventBusSubscriber(value = Dist.CLIENT)
+    public static class ClientModEvents
+    {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event)
+        {
+            /*
+             *** Curio Renderer
+             */
+
+            // IRA
+            AzArmorRendererRegistry.register(IraItemRenderer::new, SFItemsRegistry.IRA.get());
+            CuriosRendererRegistry.register(
+                    SFItemsRegistry.IRA.get(), IraRenderer::new
+            );
+
+            /*
+             *** Animation Registry
+             */
+
+            AzIdentityRegistry.register(
+                    SFItemsRegistry.IRA.get()
+            );
+        }
     }
 }

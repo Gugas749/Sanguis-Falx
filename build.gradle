@@ -134,6 +134,9 @@ dependencies {
     implementation "curse.maven:apothic-attributes-${apothic_attributes_version}"
     implementation "curse.maven:placebo-${placebo_version}"
     compileOnly "curse.maven:apotheosis-${apotheosis_version}"
+
+    //AzureLib
+    implementation "mod.azure.azurelib:azurelib-neo-${minecraft_version}:${azurelib_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

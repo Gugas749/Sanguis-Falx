@@ -22,10 +22,17 @@ public class SFCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         /*
-                         *** Materials
+                         *** WEAPONS
                          */
 
                         output.accept(SFItemsRegistry.SANGUIS_FALX.get());
+
+
+
+                        /*
+                         *** CURIOS
+                         */
+                        output.accept(SFItemsRegistry.IRA.get());
 
                     }).build());
 
