@@ -5,7 +5,7 @@
       "name": "SANGUISFALX_RARITY_SANGUIS",
       "constructor": "(ILjava/lang/String;Ljava/util/function/UnaryOperator;)V",
       "parameters": {
-        "class": "com/gugas749/sanguisfalx/common/Utils/Rarities",
+        "class": "com/gugas749/sanguisfalx/Utils/SFRarities",
         "field": "SANGUIS_RARITY"
       }
     }

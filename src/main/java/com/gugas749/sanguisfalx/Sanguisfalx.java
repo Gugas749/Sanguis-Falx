@@ -1,6 +1,7 @@
 package com.gugas749.sanguisfalx;
 
-import com.gugas749.sanguisfalx.common.Registries.ModItems;
+import com.gugas749.sanguisfalx.Registries.SFCreativeModeTabs;
+import com.gugas749.sanguisfalx.Registries.SFItemsRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
@@ -27,24 +28,10 @@ public class Sanguisfalx {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Sanguisfalx(IEventBus modEventBus, ModContainer modContainer) {
+        SFItemsRegistry.ITEMS.register(modEventBus);
+        SFCreativeModeTabs.register(modEventBus);
 
-        // Register all custom items with Minecraft's registry via a DeferredRegister.
-        // DeferredRegister is a lazy container — items are not registered right now,
-        // they queue up and register themselves when the correct setup event fires.
-        // Similar to a ServiceLocator / DI container that resolves dependencies lazily.
-        ModItems.ITEMS.register(modEventBus);
-
-        // Register the contract data attachment types (the persistent per-player data storage).
-        //ContractCapability.ATTACHMENT_TYPES.register(modEventBus);
-
-        // Subscribe our commonSetup method to the FMLCommonSetupEvent.
-        // "this::commonSetup" is a method reference — the Java equivalent of a delegate in C#.
-        // This method will be called during the "common setup" phase (runs on both client and server).
         modEventBus.addListener(this::commonSetup);
-
-        // Subscribe the PacketHandler's static method to the payload registration event.
-        // This is how the mod tells NeoForge which network packets exist.
-        //modEventBus.addListener(PacketHandler::registerPayloads);
     }
 
     // Runs once during the common setup phase (after items are registered, before the game starts).

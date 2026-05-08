@@ -10,6 +10,29 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+
+    maven {
+        name = "Iron's Maven - Release"
+        url = "https://code.redspace.io/releases"
+    }
+
+    maven {
+        name = "Iron's Maven - Snapshots"
+        url = "https://code.redspace.io/snapshots"
+    }
+
+    maven { url = "https://maven.enginehub.org/repo/" }
+    maven {
+        url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/"
+        content {
+            includeGroup("software.bernie.geckolib")
+        }
+    }
+    maven { url = "https://maven.theillusivec4.top" }
+    maven { url = "https://cursemaven.com" }
+    maven { url = "https://maven.blamejared.com" }
+    maven { url = "https://maven.kosmx.dev/" }
+    maven { url = 'https://maven.azuredoom.com/mods'}
 }
 
 base {
@@ -96,26 +119,21 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    // Example mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
-    // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
+    //Malum
+    implementation "curse.maven:malum-${malum_version}"
+    implementation "curse.maven:lodestone-${lodestone_version}"
 
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation "blank:coolmod-${mc_version}:${coolmod_version}"
+    //Iron's Spells 'n Spellbooks
+    implementation "curse.maven:irons_spells_n_spellbooks-${irons_spells_version}"
+    implementation "curse.maven:iron_lib-${iron_lib_version}"
+    implementation "curse.maven:geckolib-${geckolib_version}"
+    implementation "curse.maven:player_animator-${player_animator_version}"
+    implementation "curse.maven:curios-${curios_version}"
 
-    // Example mod dependency using a file as dependency
-    // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
-
-    // Example project dependency using a sister or child project:
-    // implementation project(":myproject")
-
-    // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    //Apothic Attributes
+    implementation "curse.maven:apothic-attributes-${apothic_attributes_version}"
+    implementation "curse.maven:placebo-${placebo_version}"
+    compileOnly "curse.maven:apotheosis-${apotheosis_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

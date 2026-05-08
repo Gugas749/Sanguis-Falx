@@ -1,11 +1,11 @@
-package com.gugas749.sanguisfalx.common.Utils;
+package com.gugas749.sanguisfalx.Utils;
 
 import net.minecraft.world.item.Rarity;
 import net.minecraft.network.chat.Style;
 import net.neoforged.fml.common.asm.enumextension.EnumProxy;
 import java.util.function.UnaryOperator;
 
-public class Rarities {
+public class SFRarities {
 
     public static final EnumProxy<Rarity> SANGUIS_RARITY = new EnumProxy<>(Rarity.class,
             -1,

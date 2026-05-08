@@ -1,4 +1,4 @@
-package com.gugas749.sanguisfalx.common.Registries;
+package com.gugas749.sanguisfalx.Registries;
 
 import com.gugas749.sanguisfalx.Sanguisfalx;
 import net.minecraft.core.registries.Registries;
@@ -10,13 +10,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class CreativeModeTabs {
+public class SFCreativeModeTabs {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Sanguisfalx.MODID);
 
     public static final Supplier<CreativeModeTab> EA_EQUIPMENT = CREATIVE_MODE_TAB.register("ea_equipment",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SANGUIS_FALX.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(SFItemsRegistry.SANGUIS_FALX.get()))
                     //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(EnigmaticArcana.MOD_ID, "ea_materials"))
                     .title(Component.translatable("creativetab.sanguisfalx"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -25,7 +25,7 @@ public class CreativeModeTabs {
                          *** Materials
                          */
 
-                        output.accept(ModItems.SANGUIS_FALX.get());
+                        output.accept(SFItemsRegistry.SANGUIS_FALX.get());
 
                     }).build());
 
