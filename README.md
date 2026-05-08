@@ -29,10 +29,10 @@ The **Sanguis Falx** is a unique scythe with custom stats and deep integration w
 
 The **Ira** is a unique curios item with custom stats and deep integration with the magic mod ecosystem:
 
-| Stat              | Value   |
-|-------------------|---------|
-| Magic Proficiency | 20%     |
-| Magic Resistance  | 20%  |
+| Stat              | Value |
+|-------------------|-------|
+| Magic Proficiency | +25%  |
+| Magic Resistance  | +25%  |
 
 ---
 

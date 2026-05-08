@@ -1,14 +1,8 @@
 package com.gugas749.sanguisfalx;
 
-import com.gugas749.sanguisfalx.Items.Curios.IraItemRenderer;
-import com.gugas749.sanguisfalx.Items.Curios.IraRenderer;
 import com.gugas749.sanguisfalx.Registries.SFCreativeModeTabs;
 import com.gugas749.sanguisfalx.Registries.SFItemsRegistry;
 import com.mojang.logging.LogUtils;
-import io.redspace.ironsspellbooks.item.SpellBook;
-import io.redspace.ironsspellbooks.render.SpellBookCurioRenderer;
-import mod.azure.azurelib.common.animation.cache.AzIdentityRegistry;
-import mod.azure.azurelib.common.render.armor.AzArmorRendererRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -19,25 +13,13 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.slf4j.Logger;
-import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
-// @Mod marks this class as the NeoForge mod entry point.
-// NeoForge reads this annotation and calls the constructor when Minecraft loads the mod.
-// Think of it like @Application in Android — it's the first thing that runs.
-// The string inside must match the modid in neoforge.mods.toml.
 @Mod(Sanguisfalx.MODID)
 public class Sanguisfalx {
 
-    // The mod's unique ID used everywhere to identify assets, packets, registry entries, etc.
-    // Like a package name (com.example.myapp) in Android, but shorter.
     public static final String MODID = "sanguisfalx";
-
-    // Logger for printing debug/info messages to the game console and log file.
-    // Equivalent to Log.d() in Android or Console.WriteLine() in C#.
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Sanguisfalx(IEventBus modEventBus, ModContainer modContainer) {
         SFItemsRegistry.register(modEventBus);
         SFCreativeModeTabs.register(modEventBus);
@@ -45,19 +27,12 @@ public class Sanguisfalx {
         modEventBus.addListener(this::commonSetup);
     }
 
-    // Runs once during the common setup phase (after items are registered, before the game starts).
-    // event.enqueueWork() defers the lambda to run safely on the main thread —
-    // equivalent to runOnUiThread() in Android or Control.Invoke() in C# WinForms.
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             LOGGER.info("[SanguisFalx] Succefully loaded!");
         });
     }
 
-    // Utility helper: builds a ResourceLocation namespaced to this mod.
-    // A ResourceLocation is a two-part key: "namespace:path" (e.g. "abcontrato:contract_action").
-    // Used everywhere to uniquely identify assets, registry entries, network channels, etc.
-    // Think of it like a URI or a fully qualified class name.
     public static ResourceLocation rl(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
@@ -70,23 +45,7 @@ public class Sanguisfalx {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            /*
-             *** Curio Renderer
-             */
 
-            // IRA
-            AzArmorRendererRegistry.register(IraItemRenderer::new, SFItemsRegistry.IRA.get());
-            CuriosRendererRegistry.register(
-                    SFItemsRegistry.IRA.get(), IraRenderer::new
-            );
-
-            /*
-             *** Animation Registry
-             */
-
-            AzIdentityRegistry.register(
-                    SFItemsRegistry.IRA.get()
-            );
         }
     }
 }

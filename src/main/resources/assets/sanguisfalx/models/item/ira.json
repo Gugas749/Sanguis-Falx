@@ -3,17 +3,6 @@
   "parent": "minecraft:item/generated",
   "render_type": "cutout",
   "textures": {
-    "layer0": "sanguisfalx:item/curios/ira",
-    "layer1": "sanguisfalx:item/curios/ira_emissive"
-  },
-  "neoforge_data": {
-    "layers": {
-      "1": {
-        "color": "FFFFFFFF",
-        "block_light": 15,
-        "sky_light": 15,
-        "ambient_occlusion": false
-      }
-    }
+    "layer0": "sanguisfalx:item/curios/ira"
   }
 }
