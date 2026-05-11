@@ -1,4 +1,4 @@
-<img src="https://imgur.com/a/J0tKbH8">
+<img src="https://imgur.com/VVRJPin.png">
 
 ![Mod loader: Forge](https://img.shields.io/badge/Loader-forge-1976d2?style=flat-square&color=orange&logo=curseforge&labelColor=0d1117)
 <br>
@@ -6,8 +6,6 @@
 # SanguisFalx
 
 > ### *May the hatred of your enemies become your most powerful weapon\'s...*
-
----
 
 ## Requirements
 
