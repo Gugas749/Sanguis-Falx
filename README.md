@@ -1,6 +1,6 @@
 <img src="https://imgur.com/VVRJPin.png">
 
-![Mod loader: Forge](https://img.shields.io/badge/Loader-forge-1976d2?style=flat-square&color=orange&logo=curseforge&labelColor=0d1117)
+![Mod loader: NeoForge](https://img.shields.io/badge/Loader-Neoforge-1976d2?style=flat-square&color=orange&logo=curseforge&labelColor=0d1117)
 <br>
 
 # SanguisFalx

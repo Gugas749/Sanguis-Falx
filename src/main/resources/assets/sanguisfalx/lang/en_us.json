@@ -9,5 +9,8 @@
   "item.sanguisfalx.sanguis_spirit": "Sanguis Spirit",
   "sanguisfalx.gui.spirit.sanguis": "Sanguis",
   "sanguisfalx.gui.spirit.sanguis.counted": "%1$9 Sanguis",
-  "sanguisfalx.gui.spirit.sanguis.flavour": "Mortem"
+  "sanguisfalx.gui.spirit.sanguis.flavour": "Mortem",
+  "item.lost_scythe.name": "Lost Scythe",
+  "item.lost_scythe.tooltip1": "A broken, strange looking Scythe, that looks like it has been through lot before...",
+  "item.lost_scythe.tooltip2": "Odium inimicorum tuorum fiat arma tua potentissima."
 }

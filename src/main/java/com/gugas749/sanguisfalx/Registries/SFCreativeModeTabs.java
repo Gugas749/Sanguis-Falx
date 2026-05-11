@@ -15,9 +15,9 @@ public class SFCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Sanguisfalx.MODID);
 
-    public static final Supplier<CreativeModeTab> EA_EQUIPMENT = CREATIVE_MODE_TAB.register("ea_equipment",
+    public static final Supplier<CreativeModeTab> SF_ITEMS = CREATIVE_MODE_TAB.register("sf_items",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(SFItemsRegistry.IRA.get()))
-                    //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(EnigmaticArcana.MOD_ID, "ea_materials"))
+                    //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(EnigmaticArcana.MOD_ID, "sf_materials"))
                     .title(Component.translatable("creativetab.sanguisfalx"))
                     .displayItems((itemDisplayParameters, output) -> {
 
@@ -32,8 +32,7 @@ public class SFCreativeModeTabs {
                          */
 
                         output.accept(SFItemsRegistry.SANGUIS_FALX.get());
-
-
+                        output.accept(SFItemsRegistry.LOST_SCYTHE.get());
 
                         /*
                          *** CURIOS

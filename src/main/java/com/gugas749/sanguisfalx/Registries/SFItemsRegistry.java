@@ -2,6 +2,7 @@ package com.gugas749.sanguisfalx.Registries;
 
 import com.gugas749.sanguisfalx.Items.Curios.IraItem;
 import com.gugas749.sanguisfalx.Items.Spirit.SpiritSanguisType;
+import com.gugas749.sanguisfalx.Items.Weapons.LostScytheItem;
 import com.gugas749.sanguisfalx.Sanguisfalx;
 import com.gugas749.sanguisfalx.Items.Weapons.SanguisFalxItem;
 import com.sammy.malum.common.item.spirit.SpiritShardItem;
@@ -29,6 +30,8 @@ public class SFItemsRegistry {
     public static final DeferredHolder<Item, Item> SANGUIS_FALX = ITEMS.register
             ("sanguis_falx", SanguisFalxItem::new);
 
+    public static final DeferredHolder<Item, Item> LOST_SCYTHE = ITEMS.register
+            ("lost_scythe", LostScytheItem::new);
 
     /*
      *** Curios

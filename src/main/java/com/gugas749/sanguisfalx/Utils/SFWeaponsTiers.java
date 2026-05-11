@@ -29,6 +29,19 @@ public class SFWeaponsTiers implements Tier, IronsWeaponTier {
             new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 5, AttributeModifier.Operation.ADD_VALUE)
     );
 
+    public static final SFWeaponsTiers LOST = new SFWeaponsTiers(
+            8064,
+            2F,
+            1.3F,
+            10,
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            () -> Ingredient.EMPTY,
+            new AttributeContainer(ALObjects.Attributes.CRIT_CHANCE, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.SPELL_RESIST, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2, AttributeModifier.Operation.ADD_VALUE)
+    );
+
     private final int uses;
     private final float damage;
     private final float speed;
