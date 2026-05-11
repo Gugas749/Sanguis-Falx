@@ -28,4 +28,4 @@
 
 ## License
 
-[BSD 3-Clause License](LICENSE.md) — © 2026 Gugas749
+[BSD 3-Clause License](LICENSE) — © 2026 Gugas749
