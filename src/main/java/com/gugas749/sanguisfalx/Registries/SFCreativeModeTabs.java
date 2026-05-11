@@ -16,7 +16,7 @@ public class SFCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Sanguisfalx.MODID);
 
     public static final Supplier<CreativeModeTab> EA_EQUIPMENT = CREATIVE_MODE_TAB.register("ea_equipment",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(SFItemsRegistry.SANGUIS_FALX.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(SFItemsRegistry.IRA.get()))
                     //.withTabsBefore(ResourceLocation.fromNamespaceAndPath(EnigmaticArcana.MOD_ID, "ea_materials"))
                     .title(Component.translatable("creativetab.sanguisfalx"))
                     .displayItems((itemDisplayParameters, output) -> {
