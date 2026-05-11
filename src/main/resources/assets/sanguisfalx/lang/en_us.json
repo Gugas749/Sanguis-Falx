@@ -5,5 +5,9 @@
   "rarity.SANGUISFALX_RARITY_SANGUIS.name": "Sanguis",
   "item.ira.name": "Ira",
   "item.ira.tooltip1": "Forma physica maximae irae tuae.",
-  "item.ira.tooltip2": "Sentiant inimici tui iram tuam in propria pelle."
+  "item.ira.tooltip2": "Sentiant inimici tui iram tuam in propria pelle.",
+  "item.sanguisfalx.sanguis_spirit": "Sanguis Spirit",
+  "sanguisfalx.gui.spirit.sanguis": "Sanguis",
+  "sanguisfalx.gui.spirit.sanguis.counted": "%1$9 Sanguis",
+  "sanguisfalx.gui.spirit.sanguis.flavour": "Mortem"
 }

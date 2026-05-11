@@ -1,0 +1,10 @@
+{
+  "registry_name": "minecraft:player",
+  "primary_type": "sanguisfalx:sanguis",
+  "spirits": [
+    {
+      "spirit": "sanguisfalx:sanguis",
+      "count": 1
+    }
+  ]
+}

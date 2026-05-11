@@ -22,6 +22,12 @@ public class SFCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         /*
+                         *** SPIRIT
+                         */
+
+                        output.accept(SFSpiritTypes.SANGUIS_SPIRIT.get());
+
+                        /*
                          *** WEAPONS
                          */
 

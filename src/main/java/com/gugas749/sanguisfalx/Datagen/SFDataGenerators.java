@@ -23,6 +23,8 @@ public class SFDataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        generator.addProvider(event.includeServer(), new SFRecipeProvider(packOutput, lookupProvider));
+
         BlockTagsProvider blockTags = new SFBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new SFItemTagProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));

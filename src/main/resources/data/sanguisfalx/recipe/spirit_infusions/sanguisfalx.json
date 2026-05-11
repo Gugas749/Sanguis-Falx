@@ -1,0 +1,32 @@
+{
+  "type": "malum:spirit_infusion",
+  "carryOverComponentData": true,
+  "extraInputs": [
+    {
+      "count": 1,
+      "item": "minecraft:skeleton_skull"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    {
+      "count": 16,
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "input": {
+    "count": 1,
+    "item": "malum:soul_stained_steel_scythe"
+  },
+  "result": {
+    "count": 1,
+    "id": "sanguisfalx:sanguis_falx"
+  },
+  "spirits": [
+    {
+      "type": "sanguisfalx:sanguis",
+      "count": 16
+    }
+  ]
+}

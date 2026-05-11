@@ -1,5 +1,6 @@
 package com.gugas749.sanguisfalx;
 
+import com.gugas749.sanguisfalx.Registries.SFSpiritTypes;
 import com.gugas749.sanguisfalx.Registries.SFCreativeModeTabs;
 import com.gugas749.sanguisfalx.Registries.SFItemsRegistry;
 import com.mojang.logging.LogUtils;
@@ -23,6 +24,7 @@ public class Sanguisfalx {
     public Sanguisfalx(IEventBus modEventBus, ModContainer modContainer) {
         SFItemsRegistry.register(modEventBus);
         SFCreativeModeTabs.register(modEventBus);
+        SFSpiritTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
     }
