@@ -39,6 +39,15 @@ public class SFCreativeModeTabs {
                          */
                         output.accept(SFItemsRegistry.IRA.get());
 
+
+                        /*
+                         *** ARMORS
+                         */
+                        output.accept(SFItemsRegistry.SANGUIS_HELMET.get());
+                        output.accept(SFItemsRegistry.SANGUIS_CHESTPLATE.get());
+                        output.accept(SFItemsRegistry.SANGUIS_LEGGINGS.get());
+                        output.accept(SFItemsRegistry.SANGUIS_BOOTS.get());
+
                     }).build());
 
 

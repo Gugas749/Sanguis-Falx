@@ -1,23 +1,19 @@
 package com.gugas749.sanguisfalx.Registries;
 
-import com.gugas749.sanguisfalx.Items.Curios.IraItem;
-import com.gugas749.sanguisfalx.Items.Spirit.SpiritSanguisType;
+import com.gugas749.sanguisfalx.Items.Equipable.Armors.SanguisSet.SanguisArmorItem;
+import com.gugas749.sanguisfalx.Items.Equipable.Curios.IraItem;
 import com.gugas749.sanguisfalx.Items.Weapons.LostScytheItem;
 import com.gugas749.sanguisfalx.Sanguisfalx;
 import com.gugas749.sanguisfalx.Items.Weapons.SanguisFalxItem;
-import com.sammy.malum.common.item.spirit.SpiritShardItem;
-import com.sammy.malum.core.systems.registry.SpiritHolder;
-import com.sammy.malum.core.systems.spirit.type.SpiritArcanaType;
-import com.sammy.malum.core.systems.spirit.type.SpiritColorProperties;
-import com.sammy.malum.registry.common.magic.MalumSpiritTypes;
+import com.gugas749.sanguisfalx.Utils.SFRarities;
+import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import team.lodestar.lodestone.systems.easing.Easing;
 
-import java.awt.*;
 import java.util.Collection;
 
 public class SFItemsRegistry {
@@ -47,4 +43,40 @@ public class SFItemsRegistry {
     {
         ITEMS.register(eventBus);
     }
+
+
+
+
+    /*
+     *** Armor
+     */
+
+    public static final DeferredHolder<Item, Item> SANGUIS_HELMET = ITEMS.register("sanguis_helmet",
+            () -> new SanguisArmorItem(ArmorItem.Type.HELMET, ItemPropertiesHelper
+                    .equipment(1)
+                    .rarity(SFRarities.SANGUIS_RARITY.getValue())
+                    .fireResistant()
+                    .durability(ArmorItem.Type.HELMET.getDurability(64))
+            ));
+    public static final DeferredHolder<Item, Item> SANGUIS_CHESTPLATE = ITEMS.register("sanguis_chestplate",
+            () -> new SanguisArmorItem(ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper
+                    .equipment(1)
+                    .rarity(SFRarities.SANGUIS_RARITY.getValue())
+                    .fireResistant()
+                    .durability(ArmorItem.Type.CHESTPLATE.getDurability(64))
+            ));
+    public static final DeferredHolder<Item, Item> SANGUIS_LEGGINGS = ITEMS.register("sanguis_leggings",
+            () -> new SanguisArmorItem(ArmorItem.Type.LEGGINGS, ItemPropertiesHelper
+                    .equipment(1)
+                    .rarity(SFRarities.SANGUIS_RARITY.getValue())
+                    .fireResistant()
+                    .durability(ArmorItem.Type.LEGGINGS.getDurability(64))
+            ));
+    public static final DeferredHolder<Item, Item> SANGUIS_BOOTS = ITEMS.register("sanguis_boots",
+            () -> new SanguisArmorItem(ArmorItem.Type.BOOTS, ItemPropertiesHelper
+                    .equipment(1)
+                    .rarity(SFRarities.SANGUIS_RARITY.getValue())
+                    .fireResistant()
+                    .durability(ArmorItem.Type.BOOTS.getDurability(64))
+            ));
 }

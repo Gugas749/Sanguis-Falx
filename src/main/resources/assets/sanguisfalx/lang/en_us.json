@@ -12,5 +12,17 @@
   "sanguisfalx.gui.spirit.sanguis.flavour": "Mortem",
   "item.lost_scythe.name": "Lost Scythe",
   "item.lost_scythe.tooltip1": "A broken, strange looking Scythe, that looks like it has been through lot before...",
-  "item.lost_scythe.tooltip2": "Odium inimicorum tuorum fiat arma tua potentissima."
+  "item.lost_scythe.tooltip2": "Odium inimicorum tuorum fiat arma tua potentissima.",
+  "item.sanguisfalx.sanguis_helmet": "Sanguis Helmet",
+  "item.sanguisfalx.sanguis_helmet.tooltip1": "Sem",
+  "item.sanguisfalx.sanguis_helmet.tooltip2": "Sem",
+  "item.sanguisfalx.sanguis_chestplate": "Sanguis Chestplate",
+  "item.sanguisfalx.sanguis_chestplate.tooltip1": "Sem",
+  "item.sanguisfalx.sanguis_chestplate.tooltip2": "Sem",
+  "item.sanguisfalx.sanguis_leggings": "Sanguis Leggings",
+  "item.sanguisfalx.sanguis_leggings.tooltip1": "Sem",
+  "item.sanguisfalx.sanguis_leggings.tooltip2": "Sem",
+  "item.sanguisfalx.sanguis_boots": "Sanguis Boots",
+  "item.sanguisfalx.sanguis_boots.tooltip1": "Sem",
+  "item.sanguisfalx.sanguis_boots.tooltip2": "Sem"
 }

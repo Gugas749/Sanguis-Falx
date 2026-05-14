@@ -1,4 +1,4 @@
-package com.gugas749.sanguisfalx.Items.Curios;
+package com.gugas749.sanguisfalx.Items.Equipable.Curios;
 
 import com.gugas749.sanguisfalx.Utils.SFDispatcher;
 import com.gugas749.sanguisfalx.Utils.SFRarities;
